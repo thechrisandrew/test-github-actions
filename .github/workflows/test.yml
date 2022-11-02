@@ -14,4 +14,4 @@ jobs:
       PR_TITLE: ${{ github.event.pull_request.title }}
     steps:
       - name: print pr title
-        run: echo "$PR_TITLE"
+        run: echo $PR_TITLE
