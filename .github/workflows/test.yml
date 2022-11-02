@@ -1,0 +1,17 @@
+name: test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  echo-pr-title:
+    name: echo a pr title
+    runs-on: ubuntu-latest
+    env:
+      PR_TITLE: ${{ github.event.pull_request.title }}
+    steps:
+      - name: print pr title
+        run: echo "$PR_TITLE"
